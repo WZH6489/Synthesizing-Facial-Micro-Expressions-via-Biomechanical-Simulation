@@ -6,7 +6,7 @@
 
 **Method:** Isolate specific muscle activations and critically evaluate the simulated outputs against real-world reference footage.
 
-The project was carried out from **July to September 2026** and supported by **Google Research** and **ExploreCSR 2024**.
+The project was carried out from **July to September 2026**.
 
 ---
 
@@ -216,7 +216,20 @@ Footage is **not** redistributed in this repository. See [`data/README.md`](data
 
 # 📚 Related Research
 
-> Add the papers and sources this work builds on (the existing biomechanical pipeline, micro-expression literature, the source of the reference footage).
+This repository accompanies undergraduate research on simulating facial micro-expressions with a biomechanical facial model.
+
+Primary reference:
+> **Beneath the Skin: Interactive Biomechanical Facial Simulations via Composable Co-Expressions**
+
+This is the biomechanical facial simulation pipeline whose behavior at micro-scales this project evaluates.
+
+Selected references:
+
+- X. Ben, Y. Ren, J. Zhang, S.-J. Wang, K. Kpalma, W. Meng and Y.-J. Liu, "Video-based facial micro-expression analysis: A survey of datasets, features and algorithms," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 44, no. 9, 2022.
+- W.-J. Yan, X. Li, S.-J. Wang, G. Zhao, Y.-J. Liu, Y.-H. Chen and X. Fu, "CASME II: An improved spontaneous micro-expression database and the baseline evaluation," PLoS ONE, vol. 9, no. 1, e86041, 2014.
+- A. K. Davison, C. Lansley, N. Costen, K. Tan and M. H. Yap, "SAMM: A spontaneous micro-facial movement dataset," IEEE Transactions on Affective Computing, vol. 9, no. 1, pp. 116-129, 2018.
+
+Additional references will be added throughout the project.
 
 ---
 
@@ -240,5 +253,3 @@ Simon Fraser University
 # 🙏 Acknowledgements
 
 Supervised by **Zhiyun (Richard) Peng** and **Eugene Fiume** at the **GrUVi Lab**, School of Computing Science, Simon Fraser University.
-
-Supported by **Google Research** and **ExploreCSR 2024**.
