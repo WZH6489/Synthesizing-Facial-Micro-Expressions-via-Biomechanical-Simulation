@@ -52,7 +52,7 @@ Comparison with Real Human Reference Footage
 Strain / Displacement Analysis (visual + numerical)
         │
         ▼
-Asset Library + Stiffness / Damping Findings
+Results + Stiffness / Damping Findings
 ```
 
 ---
@@ -64,21 +64,20 @@ Asset Library + Stiffness / Damping Findings
 3. **Collect reference footage** of the matching real facial movement (see [Reference Footage](#-reference-footage)).
 4. **Compare** simulation and reference visually (side-by-side, overlays) and numerically (strain, displacement; see [Evaluation Metrics](#-evaluation-metrics)).
 5. **Vary material properties** (stiffness, damping) to test whether the pipeline needs different values at smaller scales.
-6. **Record** every activation and its result in the asset library, including failures.
+6. **Record** every activation and its result, including failures.
 
 ---
 
 # 📊 Results
 
-> Add figures and key findings here, for example a side-by-side of simulated versus real motion for each tested muscle.
+Simulated micro-expressions for four muscle activations. The videos show the simulation only. The real reference clips come from CASME II and are not redistributed here.
 
-```
-assets/figures/
-```
-
-| Muscle / activation | Amplitude range | Matches reference? | Stiffness / damping change needed? | Notes |
-| ------------------- | --------------- | ------------------ | ---------------------------------- | ----- |
-| _TBD_               | _TBD_           | _TBD_              | _TBD_                              | _TBD_ |
+| Action unit | Emotion label | Simulation |
+| ----------- | ------------- | ---------- |
+| AU1         | Surprise      | [Watch](assets/videos/au1_surprise_sim.mp4) |
+| AU12        | Happiness     | [Watch](assets/videos/au12_happiness_sim.mp4) |
+| AU15        | Repression    | [Watch](assets/videos/au15_repression_sim.mp4) |
+| AU20        | Fear          | [Watch](assets/videos/au20_fear_sim.mp4) |
 
 **Main finding:** _TBD: does the pipeline natively handle micro-expressions, or does it need different material stiffness/damping at smaller scales?_
 
@@ -95,14 +94,6 @@ Simulated micro-expressions are compared against real human reference footage wi
 
 ---
 
-# 📚 Asset Library
-
-The asset library is the main reusable output. Each entry documents one activation: the muscle, the parameter values, the material settings, the simulated result, and how it compares with real footage.
-
-See [`asset_library/`](asset_library/) for the entries and the entry template.
-
----
-
 # 🧱 Repository Structure
 
 ```
@@ -110,47 +101,15 @@ Synthesizing-Facial-Micro-Expressions-via-Biomechanical-Simulation/
 │
 ├── README.md
 ├── LICENSE
-├── CITATION.cff
-├── requirements.txt
-├── .gitignore
-│
-├── src/                     # Maya / Python scripts for running activations
-│
-├── asset_library/           # documented activation parameters + simulated micro-expressions
-│
-├── analysis/                # strain / displacement comparison scripts and notebooks
-│
-├── data/
-│   └── README.md            # reference footage notes (data not stored in Git)
 │
 ├── assets/
-│   └── figures/             # figures used in the README and report
+│   └── videos/              # simulated micro-expression videos
 │
-├── docs/                    # short report and supporting notes
-│
-└── maya/
-    └── README.md            # scene files and plug-in notes
+└── data/
+    └── README.md            # reference footage notes (data not stored in Git)
 ```
 
-Maya scenes (`*.mb`, `*.ma`), raw footage and large renders are ignored by Git.
-
----
-
-# ⚙️ Setup
-
-Requirements:
-
-- Autodesk Maya with Python 3 (`maya.cmds` ships with Maya)
-- The lab biomechanical facial simulation pipeline and facial model scene (not stored in Git)
-- Python 3.10 or newer for the analysis scripts (see `requirements.txt`)
-
-```
-git clone https://github.com/WZH6489/Synthesizing-Facial-Micro-Expressions-via-Biomechanical-Simulation.git
-cd Synthesizing-Facial-Micro-Expressions-via-Biomechanical-Simulation
-pip install -r requirements.txt
-```
-
-> Add the exact commands for loading the scripts in Maya and running one example activation here.
+Reference footage, Maya scenes and the lab facial model are not stored in this repository.
 
 ---
 
@@ -182,9 +141,6 @@ Footage is **not** redistributed in this repository. See [`data/README.md`](data
 - Muscle Activation Control
 - Computer Vision
 - Strain and Displacement Analysis
-- NumPy / SciPy / pandas
-- OpenCV
-- Matplotlib
 
 ---
 
