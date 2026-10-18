@@ -1,0 +1,6 @@
+# Analysis scripts only. Maya's own Python (maya.cmds) ships with Maya.
+numpy
+scipy
+pandas
+matplotlib
+opencv-python

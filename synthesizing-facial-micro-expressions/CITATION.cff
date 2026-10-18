@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Synthesizing Facial Micro-Expressions via Biomechanical Simulation"
+type: software
+authors:
+  - family-names: Huang
+    given-names: William
+    affiliation: "Simon Fraser University"
+date-released: 2026-10-16
+license: MIT
+repository-code: "https://github.com/WZH6489/Synthesizing-Facial-Micro-Expressions-via-Biomechanical-Simulation"
+abstract: >-
+  Tests whether an existing biomechanical facial pipeline accurately captures
+  microscopic skin dynamics during subtle motor activations, by isolating
+  specific muscle activations and evaluating simulated outputs against
+  real-world reference footage.
