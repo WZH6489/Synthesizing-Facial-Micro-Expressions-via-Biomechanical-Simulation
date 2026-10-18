@@ -79,8 +79,6 @@ Simulated micro-expressions for four muscle activations. The videos show the sim
 | AU15        | Repression    | [Watch](assets/videos/au15_repression_sim.mp4) |
 | AU20        | Fear          | [Watch](assets/videos/au20_fear_sim.mp4) |
 
-**Main finding:** _TBD: does the pipeline natively handle micro-expressions, or does it need different material stiffness/damping at smaller scales?_
-
 ---
 
 # 📈 Evaluation Metrics
@@ -89,7 +87,7 @@ Simulated micro-expressions are compared against real human reference footage wi
 
 - **Visual comparison:** side-by-side and overlay of the simulated skin motion with the reference footage
 - **Strain:** local deformation of the skin surface in simulation versus reference
-- **Displacement:** skin or landmark displacement in simulation versus reference (state units: pixels or mm)
+- **Displacement:** skin or landmark displacement in simulation versus reference
 - **Native vs. adjusted properties:** whether the pipeline reproduces the reference with its current settings, or only after changing material stiffness and damping at smaller scales
 
 ---
@@ -115,20 +113,7 @@ Reference footage, Maya scenes and the lab facial model are not stored in this r
 
 # 🗂 Reference Footage
 
-> Describe the real human reference footage: source, number of clips, frame rate, and how it was aligned with the simulation.
-
 Footage is **not** redistributed in this repository. See [`data/README.md`](data/README.md).
-
----
-
-# ⚠️ Limitations
-
-> Fill in from your findings. This is part of the academic output.
-
-- Results come from a single facial model.
-- _TBD: where the pipeline diverges from real footage at micro-scales._
-- _TBD: sensitivity to stiffness, damping and numerical noise at small activations._
-- _TBD: limits of the reference footage (resolution, frame rate, lighting) for measuring strain._
 
 ---
 
