@@ -57,20 +57,6 @@ Asset Library + Stiffness / Damping Findings
 
 ---
 
-# 📦 Deliverables
-
-- **Asset Library:** A documented database of activation parameters and their corresponding simulated micro-expressions.
-- **Analysis:** A visual and numerical comparison (e.g., measuring strain or displacement) between the simulated micro-expressions and real human reference footage.
-- **Academic Output:** A short report evaluating whether the current simulation pipeline natively handles micro-expressions or if it requires different material stiffness/damping properties at smaller scales.
-
-| Deliverable     | Location                                       | Status |
-| --------------- | ---------------------------------------------- | ------ |
-| Asset Library   | [`asset_library/`](asset_library/)             | ☐      |
-| Analysis        | [`analysis/`](analysis/)                       | ☐      |
-| Academic Output | [`docs/`](docs/)                               | ☐      |
-
----
-
 # 🔬 Method
 
 1. **Isolate** one muscle activation at a time so each effect on the skin can be attributed to a single cause.
@@ -79,22 +65,6 @@ Asset Library + Stiffness / Damping Findings
 4. **Compare** simulation and reference visually (side-by-side, overlays) and numerically (strain, displacement; see [Evaluation Metrics](#-evaluation-metrics)).
 5. **Vary material properties** (stiffness, damping) to test whether the pipeline needs different values at smaller scales.
 6. **Record** every activation and its result in the asset library, including failures.
-
----
-
-# ✅ Project Status
-
-> Tick these off as the work is finalized.
-
-- [ ] Pipeline set up and verified on the lab facial model
-- [ ] Single-muscle isolation workflow documented
-- [ ] Activation sweeps simulated
-- [ ] Reference footage selected and aligned
-- [ ] Visual comparison complete
-- [ ] Strain / displacement comparison complete
-- [ ] Stiffness and damping experiments complete
-- [ ] Asset library documented
-- [ ] Short report written
 
 ---
 
@@ -116,14 +86,12 @@ assets/figures/
 
 # 📈 Evaluation Metrics
 
-> Trim to what you actually measured.
+Simulated micro-expressions are compared against real human reference footage with:
 
-- **Displacement:** skin or landmark displacement in simulation versus reference (state units: pixels or mm)
+- **Visual comparison:** side-by-side and overlay of the simulated skin motion with the reference footage
 - **Strain:** local deformation of the skin surface in simulation versus reference
-- **Temporal agreement:** onset, peak and offset timing of the movement
-- **Spatial extent:** how far the movement spreads over the face
-- **Parameter sensitivity:** how displacement and strain change with activation amplitude, stiffness and damping
-- **Visual comparison:** side-by-side and overlay with the reference footage
+- **Displacement:** skin or landmark displacement in simulation versus reference (state units: pixels or mm)
+- **Native vs. adjusted properties:** whether the pipeline reproduces the reference with its current settings, or only after changing material stiffness and damping at smaller scales
 
 ---
 
@@ -205,12 +173,32 @@ Footage is **not** redistributed in this repository. See [`data/README.md`](data
 
 ---
 
+# 🛠 Technologies
+
+- Python
+- Autodesk Maya
+- Maya Commands (cmds)
+- Biomechanical Simulation
+- Muscle Activation Control
+- Computer Vision
+- Strain and Displacement Analysis
+- NumPy / SciPy / pandas
+- OpenCV
+- Matplotlib
+
+---
+
 # 🚀 Future Work
 
-- Extend the evaluation to more muscles and combined activations
-- Test on additional facial models and subjects
-- Calibrate stiffness and damping automatically for small-scale activations
-- Higher-resolution, higher-frame-rate reference capture for more precise strain measurement
+**Project 2: Synthesizing Fine-Grained Facial Dynamics: Micro-Expressions and Indigenous Phonemes** is the planned continuation of this project.
+
+- Synthesize the phonetic inventories of Canadian Indigenous languages (such as Coast Salish or Hul'q'umi'num'), which demand specific lip-rounding and facial tension for ejective sounds
+- Simulate involuntary micro-expressions, such as repressed smiles and fleeting brow furrows, by injecting asymmetric, high-frequency, low-duration muscle bursts into the pipeline
+- Isolate the motor unit activations required for these complex movements
+- Test whether the physical parameters capture distinct skin, lip and jaw dynamics without losing structural volume
+- Measure temporal strain distribution and jaw displacement against real human footage
+- Evaluate whether the simulation natively handles high-frequency articulatory movements or requires novel co-activation strategies
+- Build a documented asset library of muscle activation parameters for these fine-grained movements
 
 ---
 
@@ -251,5 +239,7 @@ Simon Fraser University
 ---
 
 # 🙏 Acknowledgements
+
+This project is conducted as part of an undergraduate research position at Simon Fraser University.
 
 Supervised by **Zhiyun (Richard) Peng** and **Eugene Fiume** at the **GrUVi Lab**, School of Computing Science, Simon Fraser University.
