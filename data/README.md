@@ -1,6 +1,6 @@
 # Data
 
-Reference footage and other large data are **not** stored in this repository (Git ignores everything in this folder except this file).
+Reference footage and other large data are **not** stored in this repository.
 
 ## License
 
@@ -10,5 +10,8 @@ The real human reference footage comes from the **CASME II** micro-expression da
 
 ## Notes
 
-- Which clips were used for each tested muscle activation
-- Where to place the files locally to run the analysis scripts
+- Clips used for each tested muscle activation (subject / clip):
+  - 01 / EP02_01f
+  - 02 / EP01_11f
+  - 02 / EP13_04
+  - 09 / EP13_02
